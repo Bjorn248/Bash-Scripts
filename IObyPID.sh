@@ -4,15 +4,16 @@
 # You can either run the script with the PID as a parameter 
 # (i.e. IObyPID.sh 15535) or enter it after you start the script (it will prompt you).
 
-while [ true ]
-    do
-        if [ -z "$1" ];
+if [ -z "$1" ];
             then
                 echo "Enter PID:"
                 read -e PID 
                 else
                 PID=$1
-        fi
+fi
+
+while [ true ]
+    do
         R=$(echo `cat /proc/$PID/io` | cut -d' ' -f10)
         R=$(($R/1024));
         W=$(echo `cat /proc/$PID/io` | cut -d' ' -f12)
