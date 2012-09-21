@@ -5,11 +5,11 @@
 # (i.e. IObyPID.sh 15535) or enter it after you start the script (it will prompt you).
 
 if [ -z "$1" ];
-            then
-                echo "Enter PID:"
-                read -e PID 
-                else
-                PID=$1
+then
+    echo "Enter PID:"
+    read -e PID 
+    else
+    PID=$1
 fi
 
 while [ true ]
