@@ -1,13 +1,13 @@
 #! /bin/bash
 
-# This bash script will print out the read and write disk IO for a particular running process. 
-# You can either run the script with the PID as a parameter 
+# This bash script will print out the read and write disk IO for a particular running process.
+# You can either run the script with the PID as a parameter
 # (i.e. IObyPID.sh 15535) or enter it after you start the script (it will prompt you).
 
 if [ -z "$1" ];
 then
     echo "Enter PID:"
-    read -e PID 
+    read -e PID
     else
     PID=$1
 fi
